@@ -1,4 +1,4 @@
-@WeatherForecast.API_HostAddress = http://localhost:5254
+@WeatherForecast.API_HostAddress = http://localhost:7001
 
 POST {{WeatherForecast.API_HostAddress}}/weatherforecast/
 Content-Type: application/json
@@ -11,3 +11,13 @@ Content-Type: application/json
 }
 
 ###
+
+POST http://cqedii08zo404nrukzl8zh1zf1lf1g0w.lambda-url.ap-southeast-2.localhost.localstack.cloud:4566/weatherforecast
+Content-Type: application/json
+
+{
+  "city": "Brisbane",
+  "date": "2025-01-02T00:00:00.000Z",
+  "temperatureC": 30,
+  "summary": "Hot and sunny"
+}

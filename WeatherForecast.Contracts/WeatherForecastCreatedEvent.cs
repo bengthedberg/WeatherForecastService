@@ -1,4 +1,4 @@
-﻿namespace WeatherForecast.Contracts;
+namespace WeatherForecast.Contracts;
 
 public class WeatherForecastCreatedEvent
 {

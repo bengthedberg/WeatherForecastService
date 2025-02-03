@@ -46,6 +46,9 @@ else
 }
 */
 
+// Add AWS Lambda support. When application is run in Lambda Kestrel is swapped out as the web server with Amazon.Lambda.AspNetCoreServer. This
+// package will act as the webserver translating request and responses between the Lambda event source and ASP.NET Core.
+builder.Services.AddAWSLambdaHosting(LambdaEventSource.HttpApi);
 
 builder.Services.AddAWSService<IAmazonSQS>();
 builder.Services.AddAWSService<IAmazonDynamoDB>();
@@ -69,13 +72,13 @@ app.MapPost("/weatherforecast",
             await publisher.SendMessageAsync(
                 new SendMessageRequest(weatherDataQueue,
                     JsonSerializer.Serialize(
-                        new WeatherForecastCreatedEvent() 
-                            {
-                                City = data.City, 
-                                Date = data.Date, 
-                                TemperatureC = data.TemperatureC,
-                                Summary = data.Summary
-                            }
+                        new WeatherForecastCreatedEvent()
+                        {
+                            City = data.City,
+                            Date = data.Date,
+                            TemperatureC = data.TemperatureC,
+                            Summary = data.Summary
+                        }
                         )));
             return Results.Created($"/weatherforecast/{data.City}/{data.Date.ToString("yyyyMMdd")}", data);
         })

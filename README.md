@@ -1,21 +1,42 @@
-# Weather Forecast Example with LocalStack
+# DotNet AWS Example with Localstack
 
-This AWS solution uses LocalStack to develop and test locally.
+This AWS solution demonstrates how to develop and test locally using [Localstack](https://docs.localstack.cloud/overview/) as well as test [AWS CDK deployment](https://docs.aws.amazon.com/cdk/v2/guide/home.html).
 
-[Localstack](https://docs.localstack.cloud/overview/)
+See [steps](.STEPS.md) for information on how this project was created.
+
+The solution consists of a lambda API that uses the classic weather forecast example from the dotnet templates. It accepts a POST request that saves a weather forecaset to a DynamoDB table and pushes an event to a SQS queue. The event is comnsumed by another lambda that just logs it to a log file.
 
 ## Prerequistes
 
 - [Docker](https://docs.docker.com/get-started/introduction/get-docker-desktop/)
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- [Amazon.Lambda.Tools](https://docs.aws.amazon.com/lambda/latest/dg/csharp-package-cli.html)  
+  Install Amazon.Lambda.Tools Global Tools if not already installed.
+
+  ```
+  dotnet tool install -g Amazon.Lambda.Tools
+  ```
+
+  If already installed check if new version is available.
+
+  ```
+  dotnet tool update -g Amazon.Lambda.Tools
+  ```
+
+- [CDK]()
+- [CDK Local](https://github.com/localstack/aws-cdk-local)
+  ```
+  npm i -g aws-cdk
+  npm install -g aws-cdk-local aws-cdk
+  ```
 
 ## LocalStack CLI
 
-[more](https://docs.localstack.cloud/getting-started/installation/)
+[more about Localstack](https://docs.localstack.cloud/getting-started/installation/)
 
 ### Windows
 
-[installation](https://github.com/localstack/localstack-cli/releases/download/v4.1.0/localstack-cli-4.1.0-windows-amd64-onefile.zip)
+[Installation](https://github.com/localstack/localstack-cli/releases/download/v4.1.0/localstack-cli-4.1.0-windows-amd64-onefile.zip)
 
 ### Mac
 
@@ -23,7 +44,7 @@ This AWS solution uses LocalStack to develop and test locally.
 
 ## AWS CLI
 
-[more](https://docs.localstack.cloud/user-guide/integrations/aws-cli/)
+[more about AWS CLI](https://docs.localstack.cloud/user-guide/integrations/aws-cli/)
 
 You can configure a custom profile to use with LocalStack. Add the following profile to your AWS configuration file (by default, this file is at `~/.aws/config`):
 
@@ -50,6 +71,8 @@ aws s3 ls --profile localstack
 ```
 
 ## Manual Setup
+
+The solution is deployed and managed through the CDK project but sometime one need to try out things first.
 
 ### Create DynamoDB table
 

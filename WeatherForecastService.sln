@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecast.Contracts",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecast.Service", "WeatherForecast.Service\WeatherForecast.Service.csproj", "{CF5C1042-6AAF-4069-BC11-91B119C9D141}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecast.CDK", "WeatherForecast.CDK\WeatherForecast.CDK.csproj", "{B76EF030-1712-49C9-A828-1A40EBA6ADC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{CF5C1042-6AAF-4069-BC11-91B119C9D141}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF5C1042-6AAF-4069-BC11-91B119C9D141}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF5C1042-6AAF-4069-BC11-91B119C9D141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B76EF030-1712-49C9-A828-1A40EBA6ADC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B76EF030-1712-49C9-A828-1A40EBA6ADC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B76EF030-1712-49C9-A828-1A40EBA6ADC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B76EF030-1712-49C9-A828-1A40EBA6ADC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
