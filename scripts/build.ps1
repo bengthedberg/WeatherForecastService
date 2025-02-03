@@ -1,3 +1,7 @@
+$scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
+Push-Location
+Set-Location (get-item $scriptRoot ).parent
+
 dotnet lambda package --project-location .\WeatherForecast.API\ `
     --configuration Release `
     --framework net8.0 `
@@ -8,3 +12,4 @@ dotnet lambda package --project-location .\WeatherForecast.Service\ `
     --framework net8.0 `
     --output-package artifacts\WeatherForecast.Service.zip
     
+Pop-Location

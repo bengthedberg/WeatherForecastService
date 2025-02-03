@@ -451,17 +451,17 @@ namespace WeatherForecast.CDK
 }
 ```
 
-Create `bootstrap.ps1':
+Create `.\scripts\bootstrap.ps1':
 
 ```ps1
 $scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 Push-Location
-Set-Location (get-item $scriptRoot ).'\WeatherForecast.CDK'
+Set-Location (get-item $scriptRoot ).parent.'\WeatherForecast.CDK'
 cdklocal --profile localstack bootstrap aws://000000000000/ap-southeast-2
 Pop-Location
 ```
 
-Create `build.ps1':
+Create `.\scripts\build.ps1':
 
 ```ps1
 dotnet lambda package --project-location .\WeatherForecast.API\ `
@@ -475,7 +475,7 @@ dotnet lambda package --project-location .\WeatherForecast.Service\ `
     --output-package artifacts\WeatherForecast.Service.zip
 ```
 
-Create `deploy.ps1':
+Create `.\scripts\deploy-localstack.ps1':
 
 ```ps1
 $scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -486,10 +486,13 @@ Pop-Location
 ```
 
 Bootstrap the LocalStack  
-`.\bootstrap.ps1`
+`.\scripts\bootstrap.ps1`
 
 Build  
-`.\build.ps1`
+`.\scripts\build.ps1`
 
-Deploy  
-`.\deploy.ps1`
+Deploy to LocalStack  
+`.\scripts\deploy-localstack.ps1`
+
+Deploy to AWS  
+`cdk deploy`
