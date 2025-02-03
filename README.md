@@ -2,7 +2,7 @@
 
 This AWS solution demonstrates how to develop and test locally using [Localstack](https://docs.localstack.cloud/overview/) as well as test [AWS CDK deployment](https://docs.aws.amazon.com/cdk/v2/guide/home.html).
 
-See [steps](.STEPS.md) for information on how this project was created.
+See [steps](.\STEPS.md) for information on how this project was created.
 
 The solution consists of a lambda API that uses the classic weather forecast example from the dotnet templates. It accepts a POST request that saves a weather forecaset to a DynamoDB table and pushes an event to a SQS queue. The event is comnsumed by another lambda that just logs it to a log file.
 
