@@ -1,0 +1,13 @@
+@WeatherForecast.API_HostAddress = http://localhost:5254
+
+POST {{WeatherForecast.API_HostAddress}}/weatherforecast/
+Content-Type: application/json
+
+{
+  "city": "Brisbane",
+  "date": "2025-01-01T00:00:00.000Z",
+  "temperatureC": 32,
+  "summary": "Hot and sunny"
+}
+
+###

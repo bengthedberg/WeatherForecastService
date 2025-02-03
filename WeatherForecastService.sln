@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecast.API", "WeatherForecast.API\WeatherForecast.API.csproj", "{525CEF2A-D344-4DBB-909C-538735B5D2EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecast.Contracts", "WeatherForecast.Contracts\WeatherForecast.Contracts.csproj", "{4ECB0E9E-9886-4D27-B947-88FC8F2EF182}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecast.Service", "WeatherForecast.Service\WeatherForecast.Service.csproj", "{CF5C1042-6AAF-4069-BC11-91B119C9D141}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{525CEF2A-D344-4DBB-909C-538735B5D2EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{525CEF2A-D344-4DBB-909C-538735B5D2EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{525CEF2A-D344-4DBB-909C-538735B5D2EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{525CEF2A-D344-4DBB-909C-538735B5D2EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ECB0E9E-9886-4D27-B947-88FC8F2EF182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ECB0E9E-9886-4D27-B947-88FC8F2EF182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ECB0E9E-9886-4D27-B947-88FC8F2EF182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ECB0E9E-9886-4D27-B947-88FC8F2EF182}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF5C1042-6AAF-4069-BC11-91B119C9D141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF5C1042-6AAF-4069-BC11-91B119C9D141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF5C1042-6AAF-4069-BC11-91B119C9D141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF5C1042-6AAF-4069-BC11-91B119C9D141}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
